@@ -1,0 +1,36 @@
+{
+  "name": "panaromaswap_governance",
+  "version": "1.0.0",
+  "description": "Governance contracts for the Panaromaswap protocol",
+  "publishConfig": {
+    "@debo24": "https://npm.pkg.github.com"
+  },
+  "repository": "https://github.com/debo24/panaromaswap_governance.git",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "precompile": "rimraf ./build/",
+    "compile": "waffle",
+    "pretest": "yarn compile",
+    "test": "mocha",
+    "lint": "prettier ./test/**/*.ts --check",
+    "prepublishOnly": "yarn test"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.1.0",
+    "ethereumjs-util": "^7.0.4",
+    "mocha": "^8.1.3",
+    "panaromaswap_v2core": "^1.0.1",
+    "prettier": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "solc": "0.5.16",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
